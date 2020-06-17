@@ -9,12 +9,12 @@ using namespace std;
 
 */
 
-void InsertionSort(vector<int> &cards, int size)
+void InsertionSort(vector<int> &cards)
 {
     int j = 0;
 
     // Scan the unsorted elements from head
-    for (int i = 1; i < size; i++)
+    for (int i = 1; i < cards.size(); i++)
     {
         j = i - 1;
 
@@ -39,7 +39,7 @@ int main()
     vector<int> cards{9, 1, 8, 2, 7, 6, 5, 4, 2, 3, 5, 8, 3, 9, 3, 1};
     int size = cards.size();
 
-    InsertionSort(cards, size);
+    InsertionSort(cards);
 
     for (int i = 0; i < size; i++)
     {
