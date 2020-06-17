@@ -36,7 +36,7 @@ public:
                 j--;
             }
 
-            // or insert the position
+            // or insert to the position
             cards[j + 1] = newCard;
         }
     }
