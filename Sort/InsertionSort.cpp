@@ -9,38 +9,30 @@ using namespace std;
 
 */
 
-class InsertionSort
+void InsertionSort(vector<int> &cards, int size)
 {
-private:
-    vector<int> cards;
-    int size;
+    int j = 0;
 
-public:
-    InsertionSort(vector<int> &cards, int size) : cards(cards), size(size)
+    // Scan the unsorted elements from head
+    for (int i = 1; i < size; i++)
     {
-        int j = 0;
-        
-        // Scan the unsorted elements from head
-        for (int i = 1; i < size; i++)
+        j = i - 1;
+
+        // Record the new card
+        int newCard = cards[i];
+
+        // If the new card value is smaller then the previous card
+        while (j >= 0 && newCard <= cards[j])
         {
-            j = i - 1;
-
-            // Record the new card
-            int newCard = cards[i];
-
-            // If the new card value is smaller then the previous card
-            while (j >= 0 && newCard <= cards[j])
-            {
-                // Swap them
-                cards[j + 1] = cards[j];
-                j--;
-            }
-
-            // or insert to the position
-            cards[j + 1] = newCard;
+            // Swap them
+            cards[j + 1] = cards[j];
+            j--;
         }
+
+        // or insert to the position
+        cards[j + 1] = newCard;
     }
-};
+}
 
 int main()
 {
