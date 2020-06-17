@@ -2,6 +2,13 @@
 #include <vector>
 using namespace std;
 
+/*
+ Selection Sort
+ T: O(n^2)
+ O: O(1)
+ 
+*/
+
 void SelectionSort(vector<int> &cards)
 {
     int size = cards.size();
