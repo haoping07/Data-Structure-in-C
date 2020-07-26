@@ -10,11 +10,13 @@
  * 可以使用一旗標來記錄是否有交換發生，若沒交換則直接返回，時間可降至O(n)
 */
 
-void bubble_sort(int arr[], int n) {
-    for (int i = 0; i < n; i++) {
-        for (int j = 0; j < n - 1 - i; j++) {
-            if (arr[j] > arr[j + 1])
-                swap(arr[j], arr[j + 1]);
+void bubble(vector<int>& a, int n) {
+    // 總共進行n - 1次迭代
+    for (int i = 0; i < n - 1; i++) {
+        // 每次迭代都能確定尾端的一個數
+        for (int j = 0; j < n - i - 1; j++) {
+            if (a[j] > a[j + 1])
+                swap(a[j], a[j + 1]);
         }
     }
 }
