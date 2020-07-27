@@ -16,6 +16,7 @@ using namespace std;
 void merge(int arr[], int low, int mid, int high) {
     // 設一數組來接原數組
     vector<int> b;
+    // 把整個數組複製到額外空間 (複製整個數組才能對到傳進來的mid)
     for (int i = 0; i <= high; i++) b.push_back(arr[i]);
     // 交叉比較兩子樹組並填入原數組
     int i = low, j = mid + 1, k = low;
@@ -39,11 +40,11 @@ void merge_sort(int arr[], int low, int high) {
         // 合併排列左右子數組
         merge(arr, low, m, high);
     }
-} 
+}
 
 int main()
 {
-    int arr[10] = {1,10,2,9,3,8,4,7,5,6};
+    int arr[10] = { 1,10,2,9,3,8,4,7,5,6 };
     merge_sort(arr, 0, 9);
     for (int i = 0; i < 10; i++) {
         cout << arr[i] << "\t";
