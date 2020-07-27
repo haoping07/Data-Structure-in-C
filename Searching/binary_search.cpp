@@ -1,5 +1,5 @@
-/*
-§é¥b¬d§ä
+ï»¿/*
+æŠ˜åŠæŸ¥æ‰¾
 */
 
 #include <iostream>
